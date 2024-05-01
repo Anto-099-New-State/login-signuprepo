@@ -4,15 +4,15 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- main
+- master
 
-pool: FixBug
+pool: Lap-pool
 
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: 'newbie/pom.xml'
-    goals: 'compile'
+    mavenPomFile: 'pom.xml'
+    goals: 'test'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
