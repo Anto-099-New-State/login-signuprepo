@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Lap-pool
+pool: Exam
 
 steps:
 - task: Maven@4
